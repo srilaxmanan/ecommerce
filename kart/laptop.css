@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition:1s;
+}
+
+/* Body and general page styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+  color: #333;
+    padding: 20px;
+}
+h1{
+    color:aqua; 
+    animation-name:animation;
+    animation-duration:5s;
+    animation-iteration-count:infinite;
+    position:alternate;
+}
+@keyframes animation{
+    from{opacity:1;}
+    to{opacity:0;}
+
+}
+/* Marquee Section */
+.marquee-section {
+    background-color: #ffcc00;
+    padding: 10px 0;
+    text-align: center;
+    animation: slideIn 2s ease-in-out;
+}
+
+marquee {
+    font-size: 20px;
+    color: #333;
+}
+
+/* Main Content Section */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+
+/* Main product container layout */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
+    margin-top: 30px;
+}
+
+/* Individual product styling */
+.product {
+    background-color:white;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 280px;
+    box-shadow:2px 5px 18px black;
+    
+    
+}
+.product:hover{
+    background-color:;
+}
+
+
+/* Product image styling */
+.product-image {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product-image:hover{
+    transform:scale(1.25);
+
+}
+
+/* Title and Description Styling */
+.product-title {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.product-description {
+    font-size: 1rem;
+    color: BLUE;
+    margin-bottom: 15px;
+}
+
+.product-price {
+    font-size: 1.2rem;
+    color: #e74c3c;
+    margin-bottom: 15px;
+}
+
+/* Add to Cart button styling */
+.add-to-cart {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #2980b9;
+    transform:scale(1.3);
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and smaller screens */
+@media (max-width: 1024px) {
+    .product-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for tablets */
+    }
+}
+
+/* For mobile screens */
+@media (max-width: 768px) {
+    .product-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
+    }
+}
+
+/* For very small mobile screens */
+@media (max-width: 480px) {
+    .product-container {
+        grid-template-columns: 1fr; /* 1 column for small screens */
+    }
+}
